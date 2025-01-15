@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@inherits LayoutComponentBase
+
+<div class="min-h-screen flex flex-col">
+    <NavMenu></NavMenu>
+    <main class="container mx-auto px-4 py-4 flex-grow">
+
+        <article>
+            @Body
+        </article>
+    </main>
+    <footer class="bg-indigo-600 text-white py-6 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center">
+                <div class="space-x-6">
+                    <a href="#" class="hover:text-indigo-200 transition">About Us</a>
+                    <a href="#" class="hover:text-indigo-200 transition">Contact</a>
+                    <a href="#" class="hover:text-indigo-200 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-indigo-200 transition">Terms of Service</a>
+                </div>
+                <div>
+                    <p class="text-sm">&copy; 2024 MyStore. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div id="blazor-error-ui" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 text-white z-50">
+    <div class="bg-gray-900 p-6 rounded shadow-md text-center">
+        <h3 class="text-xl font-bold">An unhandled error has occurred.</h3>
+        <a href="" class="reload text-blue-500 hover:underline">Reload</a>
+        <a class="dismiss text-gray-400 hover:text-gray-200">🗙</a>
+    </div>
+</div>
+
+@* <div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+ *@

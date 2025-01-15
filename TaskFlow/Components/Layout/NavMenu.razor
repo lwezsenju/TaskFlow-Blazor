@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+<nav class="bg-indigo-600 p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo or Brand -->
+        <a href="/" class="text-white text-xl font-bold hover:text-indigo-200 transition">TaskFlow</a>
+
+        <!-- Menu (Desktop) -->
+        <div class="hidden md:flex space-x-8">
+            <AuthorizeView Roles="Admin">
+                <a href="/statistics" class="text-white hover:text-indigo-200 transition">Statistics</a>
+            </AuthorizeView>
+            <AuthorizeView>
+                <NotAuthorized>
+                    <a href="/login" class="text-white hover:text-indigo-200 transition">Login</a>
+                    <a href="/register" class="text-white hover:text-indigo-200 transition">Register</a>
+                </NotAuthorized>
+                <Authorized>
+                    @* <a href="/profile" class="text-white hover:text-indigo-200 transition">Profile</a> *@
+
+                    <a href="/tickets" class="text-white hover:text-indigo-200 transition">Tickets</a>
+                    <a href="/sprints" class="text-white hover:text-indigo-200 transition">Sprints</a>
+                    <a href="/logout" class="text-white hover:text-indigo-200 transition">Logout</a>
+                </Authorized>
+            </AuthorizeView>
+
+
+        </div>
+
+        <!-- Mobile Menu Toggle (Hamburger) -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 12h18M3 6h18M3 18h18"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden bg-indigo-700 w-full mt-4 hidden">
+        <a href="/profile" class="block text-white px-4 py-2 hover:bg-indigo-800 transition">Profile</a>
+        <a href="/products" class="block text-white px-4 py-2 hover:bg-indigo-800 transition">Products</a>
+        <a href="/cart" class="block text-white px-4 py-2 hover:bg-indigo-800 transition">Cart</a>
+    </div>
+</nav>
+    

@@ -1,0 +1,20 @@
+﻿@page "/access-denied"
+@using Microsoft.AspNetCore.Authentication
+@inject NavigationManager navigationManager
+
+<h3>AccessDenied</h3>
+
+@code {
+    [CascadingParameter]
+    public HttpContext HttpContext{ get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        if (HttpContext.User.Identity.IsAuthenticated)
+        {
+            await HttpContext.SignOutAsync();
+            navigationManager.NavigateTo("/logout",true);
+        }
+    }
+}

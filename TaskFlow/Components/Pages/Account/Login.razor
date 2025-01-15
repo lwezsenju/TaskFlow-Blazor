@@ -1,0 +1,68 @@
+﻿@page "/login"
+
+@using TaskFlow.Models.ViewModels
+@using TaskFlow.Services;
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@inject IUserService userService;
+@inject NavigationManager navigationManager;
+<div class="flex items-center justify-center h-full mx-auto">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
+        <EditForm Model="@Model" OnValidSubmit="Authenticate" FormName="LoginForm">
+            <DataAnnotationsValidator />
+            <div class="mb-6 text-center">
+                <h3 class="text-2xl font-semibold text-gray-800">LOGIN</h3>
+            </div>
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-gray-700">User Name</label>
+                <InputText @bind-Value="Model.UserName" id="username" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Enter your username" />
+                <ValidationMessage For="()=> Model.UserName" class="text-sm text-red-500" />
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <InputText @bind-Value="Model.Password" id="password" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" type="password" placeholder="Enter your password" />
+                <ValidationMessage For="()=> Model.Password" class="text-sm text-red-500" />
+            </div>
+            <div class="mb-4 text-center">
+                <span class="text-sm text-red-500">@errorMessage</span>
+            </div>
+            <div class="mb-4">
+                <button type="submit" class="w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Login</button>
+            </div>
+            <div class="text-center mt-4">
+                <a href="/register" class="text-indigo-600 hover:text-indigo-700 text-sm">Don't have an account? Register</a>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter]
+    public HttpContext? HttpContext{ get; set; }
+
+    [SupplyParameterFromForm]
+    public LoginViewModel Model { get; set; } = new();
+
+    private string? errorMessage;
+
+    private async Task Authenticate()
+    {
+        var User = await userService.Login(Model.UserName, Model.Password);
+        if (User == null)
+        {
+            errorMessage = "Invalid UserName or Password";
+            return;
+        }
+        var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, Model.UserName),
+            new Claim(ClaimTypes.Role, User.Role),
+            new Claim(ClaimTypes.NameIdentifier,User.Id.ToString()),
+        };
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+        await HttpContext.SignInAsync(principal);
+        navigationManager.NavigateTo("/");
+    }
+}
