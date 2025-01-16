@@ -1,7 +1,8 @@
 ﻿@page "/tickets/{TicketId:int}"
 @inject NavigationManager Navigation
 @inject TicketService TicketService
-
+@inject SprintService SprintService
+@inject IJSRuntime jsr;
 @using TaskFlow.Models
 @using Microsoft.AspNetCore.Components.Forms
 
@@ -37,6 +38,18 @@
                              @bind-Value="ticket.Points" />
                 <ValidationMessage For="@(() => ticket.Points)" />
             </div>
+            <div class="mb-4">
+                <label for="Sprint" class="block text-sm font-medium text-gray-700">Sprint</label>
+                <select id="Sprint" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        @bind="ticket.SprintId">
+                    <option value="">Select Sprint</option>
+                    @foreach (var sprint in sprints)
+                    {
+                        <option value="@sprint.Id">@sprint.Name</option>
+                    }
+                </select>
+                <ValidationMessage For="@(() => ticket.SprintId)" />
+            </div>
 
             <div class="mb-6">
                 <label for="Status" class="block text-sm font-medium text-gray-700">Status</label>
@@ -49,6 +62,7 @@
                 </select>
                 <ValidationMessage For="@(() => ticket.Status)" />
             </div>
+            
 
             <div class="flex justify-between">
                 <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500">Save Changes</button>
@@ -62,7 +76,7 @@
     [Parameter]
     public int TicketId { get; set; }
 
-
+    private List<Sprint> sprints = new List<Sprint>();
     private Ticket ticket = new Ticket();
     [CascadingParameter]
     Task<AuthenticationState> authStateTask { get; set; }
@@ -75,6 +89,7 @@
         UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
 
         ticket = await TicketService.GetByIdAsync(TicketId,UserId);
+        sprints = await SprintService.GetByUserIdAsync(UserId);
     }
 
     private async Task HandleValidSubmit()
@@ -90,8 +105,8 @@
         }
     }
 
-    private void Cancel()
+    private async Task Cancel()
     {
-        Navigation.NavigateTo("/tickets");
+        await jsr.InvokeVoidAsync("window.history.back");
     }
 }

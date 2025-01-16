@@ -27,6 +27,24 @@
 <body class="min-h-screen bg-gray-100">
     <Routes />
     <script src="_framework/blazor.web.js"></script>
+    <script>
+                window.addClickAwayListener = (dropdownElement) => {
+            document.addEventListener('click', (event) => {
+                if (dropdownElement && !dropdownElement.contains(event.target) && event.target.closest('[data-dropdown-toggle]') === null) {
+                    dropdownElement.style.display = 'none';
+                }
+            });
+        };
+
+        window.removeClickAwayListener = (dropdownElement) => {
+            document.removeEventListener('click', (event) => {
+                if (dropdownElement && !dropdownElement.contains(event.target)) {
+                    dropdownElement.style.display = 'none';
+                }
+            });
+        };
+
+    </script>
 </body>
 
 </html>

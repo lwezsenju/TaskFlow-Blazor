@@ -1,4 +1,5 @@
 ﻿@page "/tickets"
+@page "/"
 @inject TicketService TicketService
 @using TaskFlow.Models
 @inject NavigationManager NavigationManager
@@ -11,7 +12,17 @@
     <h1 class="text-3xl font-bold text-indigo-700 mb-6">Tickets</h1>
 
     <!-- Create Ticket Button -->
-    <div class="flex justify-end mb-4">
+    <div class="flex justify-between mb-4">
+        <div>
+            <span @onclick="@(()=>Filters("finished"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300" >Finished</span>
+            <span @onclick="@(()=>Filters("inprogress"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">In Progress</span>
+            <span @onclick="@(()=>Filters("open"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">Open</span>
+            <span @onclick="@(()=>Filters("withsprints"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">With Sprints</span>
+            <span @onclick="@(()=>Filters("withoutssprints"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">Without Sprints</span>
+            <span @onclick="@(()=>Filters("sortbypoints"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">Sort by Points </span>
+            <span @onclick="@(()=>Filters("sortbypointsdesc"))" class="bg-gray-100 hover:cursor-pointer text-gray-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-gray-700 dark:text-gray-300">Sort by Points Desc </span>
+            <span @onclick="@(()=>Filters("reset"))" class="bg-red-100  hover:cursor-pointer text-red-800 text-xs font-medium me-2 px-4 py-1 rounded-full dark:bg-red-900 dark:text-red-300">Reset</span>
+        </div>
         <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 focus:outline-none transition" @onclick="ShowCreateTicketModal">
             Create Ticket
         </button>
@@ -171,7 +182,35 @@
     Task<AuthenticationState> authStateTask { get; set; }
 
     private int UserId{ get; set; }
-
+    public async void Filters(string Filter){
+        switch(Filter.ToLower()){
+            case "finished":
+                tickets = await TicketService.Filters("finished",UserId);
+                break;
+            case "inprogress":
+                tickets = await TicketService.Filters("inprogress",UserId);
+                break;
+            case "open":
+                tickets = await TicketService.Filters("open", UserId);
+                break;
+            case "withsprints":
+                tickets = await TicketService.Filters("withsprints", UserId);
+                break;
+            case "withoutssprints":
+                tickets = await TicketService.Filters("withoutssprints", UserId);
+                break;
+            case "sortbypoints":
+                tickets = await TicketService.Filters("sortbypoints", UserId);
+                break;
+            case "sortbypointsdesc":
+                tickets = await TicketService.Filters("sortbypointsdesc", UserId);
+                break;
+            case "reset":
+                GetAllTickets();
+                break;
+        }
+        StateHasChanged();
+    }
     protected override async Task OnInitializedAsync()
     {
 
@@ -184,6 +223,7 @@
     }
     private async Task GetAllTickets(){
         tickets = await TicketService.GetByUserIdAsync(UserId);
+        tickets = tickets.Where(t => !t.SprintId.HasValue).ToList();
         StateHasChanged();
     }
     private void ShowCreateTicketModal()

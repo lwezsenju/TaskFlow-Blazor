@@ -2,6 +2,7 @@
 @using TaskFlow.Models
 @inject SprintService SprintService
 
+@inject NavigationManager Navigation
 @using TaskFlow.Components.SharedComponents;
 @rendermode InteractiveServer
 <PageTitle>Sprints List</PageTitle>
@@ -21,15 +22,15 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         @foreach (var sprint in sprints)
         {
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl hover:cursor-pointer transition-all" @onclick="()=>NavigateToDetails(sprint.Id)">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-semibold text-indigo-700">@sprint.Name</h3>
                     <DropdownMenu>
                             <li>
-                            <a href="sprints/details/@sprint.Id" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-orange-500">Details</a>
+                            <a @onclick:stopPropagation="true" @onclick:preventDefault="true" href="sprints/details/@sprint.Id" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-orange-500">Details</a>
                             </li>
                             <li>
-                                <a href="sprints/@sprint.Id"  class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-indigo-600" >Edit</a>
+                            <a @onclick:stopPropagation="true" @onclick:preventDefault="true" href="sprints/@sprint.Id" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-indigo-600">Edit</a>
                             </li>
                             <li>
                                 <a @onclick="()=>DeleteSprint(sprint)" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-red-600" >Delete</a>
@@ -43,7 +44,8 @@
                 </div>
 
                 <div class="flex justify-between items-center">
-                    <span class="inline-block px-3 py-1 text-sm font-medium text-white rounded-full" style="background-color: @sprint.Color">
+                    <span class="inline-block px-3 py-1 text-sm font-medium text-white rounded-full bg-gray-500">
+                        @* style="background-color: @sprint.Color" *@
                         Status: @GetSprintStatus(sprint)
                     </span>
 
@@ -84,26 +86,30 @@
                     <InputDate id="endDate" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg" @bind-Value="sprint.EndDate" />
                 </div>
 
-                <!-- Sprint Color -->
+                @* <!-- Sprint Color -->
                 <div class="mb-4">
                     <label for="color" class="block text-sm font-medium text-gray-700">Sprint Color</label>
                     <InputText id="color" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg" @bind-Value="sprint.Color" />
-                </div>
+                </div> *@
 
                 <!-- Submit Button -->
-                <div class="mb-4 flex justify-end">
+                <div class="mb-4 flex justify-end gap-2">
+                    <button type="button" class="bg-gray-300 text-black px-4 py-2 rounded-md" @onclick="CloseCreateSprintModal">
+                        Cancel
+                    </button>
                     <button type="submit" class="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200">
                         Create Sprint
                     </button>
+                    
                 </div>
             </EditForm>
 
-            <!-- Close Button -->
+            @* <!-- Close Button -->
             <button @onclick="CloseCreateSprintModal" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
-            </button>
+            </button> *@
         </div>
     </div>
 }
@@ -118,7 +124,10 @@
     private int UserId { get; set; }
 
     private List<Sprint> sprints = new List<Sprint>();
-
+    
+    public void NavigateToDetails(int id){
+        Navigation.NavigateTo("/sprintTickets/"+id.ToString()); 
+    }
     protected override async Task OnInitializedAsync()
     {
         var authState = await authStateTask;

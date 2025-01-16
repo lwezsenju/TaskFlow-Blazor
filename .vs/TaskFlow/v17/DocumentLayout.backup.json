@@ -1,112 +1,117 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\basse\\source\\repos\\TaskFlow\\",
+  "WorkspaceRootPath": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\sprintpages\\sprinttickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\sprinttickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\sprintpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\services\\sprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\services\\sprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\ticketpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\ticketpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\sprintpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\ticketpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\ticketpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\sprintpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\ticketpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\ticketpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\ticketpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\models\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\ticketpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\ticketpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\ticketpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\ticketpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\services\\sprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\services\\sprintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\sharedcomponents\\dropdownmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\sharedcomponents\\dropdownmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\sprintpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\models\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\models\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\models\\dategreaterthan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\dategreaterthan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\sprintpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\sharedcomponents\\dropdownmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\sharedcomponents\\dropdownmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\pages\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\sprintpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\details.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\sprintpages\\sprinttickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\sprintpages\\sprinttickets.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\models\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\sprint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\basse\\source\\repos\\taskflow\\taskflow\\migrations\\20250115123834_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\account\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\account\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TaskFlow\\Migrations\\20250115123704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\pages\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\pages\\account\\logout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|c:\\users\\p11\\downloads\\taskflow-blazor\\taskflow-blazor-main\\taskflow\\migrations\\20250115123834_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2921F4F-7FCA-4D4C-BC51-77873BAD6989}|TaskFlow\\TaskFlow.csproj|solutionrelative:taskflow\\migrations\\20250115123834_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -117,237 +122,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SprintTickets.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T00:55:42.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Details.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T00:51:44.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T23:30:06.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T22:45:14.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DropdownMenu.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T21:33:07.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAAAN4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T12:45:14.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Sprint.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\Sprint.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Models\\Sprint.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\Sprint.cs",
-              "RelativeToolTip": "TaskFlow\\Models\\Sprint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Services\\IUserService.cs",
+              "RelativeToolTip": "TaskFlow\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T09:59:45.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\User.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\User.cs",
-              "RelativeToolTip": "TaskFlow\\Models\\User.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwAwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T09:59:15.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\Ticket.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Models\\Ticket.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\Ticket.cs",
-              "RelativeToolTip": "TaskFlow\\Models\\Ticket.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T09:59:02.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\App.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\App.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T23:22:41.762Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\_Imports.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T23:24:19.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SprintService.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Services\\SprintService.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Services\\SprintService.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Services\\SprintService.cs",
-              "RelativeToolTip": "TaskFlow\\Services\\SprintService.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwCcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:19:10.802Z",
+              "WhenOpened": "2025-01-16T13:47:53.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Edit.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\Edit.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\Edit.razor",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\Edit.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\SprintPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\Edit.razor",
               "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\Edit.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-16T00:48:32.284Z",
+              "WhenOpened": "2025-01-16T13:47:45.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "20250115123834_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
-              "RelativeToolTip": "TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:38:34.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Details.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T23:16:45.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TicketService.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Services\\TicketService.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Services\\TicketService.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Services\\TicketService.cs",
-              "RelativeToolTip": "TaskFlow\\Services\\TicketService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowCUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:24:24.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\appsettings.json",
-              "RelativeDocumentMoniker": "TaskFlow\\appsettings.json",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\appsettings.json",
-              "RelativeToolTip": "TaskFlow\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-16T00:35:26.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "Login.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\Account\\Login.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\Account\\Login.razor",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\Account\\Login.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\Account\\Login.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\Account\\Login.razor",
               "RelativeToolTip": "TaskFlow\\Components\\Pages\\Account\\Login.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -355,36 +180,256 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketService.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Services\\TicketService.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Services\\TicketService.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Services\\TicketService.cs",
+              "RelativeToolTip": "TaskFlow\\Services\\TicketService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwEkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:24:24.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Pages\\TicketPages\\Edit.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T08:16:05.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DropdownMenu.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\SharedComponents\\DropdownMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T07:21:10.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Pages\\TicketPages\\Index.razor",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAOIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T12:45:14.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\Details.razor",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T13:18:25.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\Index.razor",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T07:31:06.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Pages\\TicketPages\\Details.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T13:02:33.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DateGreaterThan.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\DateGreaterThan.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Models\\DateGreaterThan.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\DateGreaterThan.cs",
+              "RelativeToolTip": "TaskFlow\\Models\\DateGreaterThan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T13:13:25.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SprintService.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Services\\SprintService.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Services\\SprintService.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Services\\SprintService.cs",
+              "RelativeToolTip": "TaskFlow\\Services\\SprintService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:19:10.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20250115123834_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
+              "RelativeToolTip": "TaskFlow\\Migrations\\20250115123834_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:38:34.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Models\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\DatabaseContext.cs",
+              "RelativeToolTip": "TaskFlow\\Models\\DatabaseContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T10:16:40.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\_Imports.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T23:24:19.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\App.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\App.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T23:22:41.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Sprint.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\Sprint.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Models\\Sprint.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\Sprint.cs",
+              "RelativeToolTip": "TaskFlow\\Models\\Sprint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T09:59:45.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "SprintTickets.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Pages\\SprintPages\\SprintTickets.razor",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwGcAAADTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-16T12:19:05.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\Ticket.cs",
+              "RelativeToolTip": "TaskFlow\\Models\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T09:59:02.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Models\\User.cs",
+              "RelativeToolTip": "TaskFlow\\Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwAwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T09:59:15.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "TaskFlow\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAowC0AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-14T23:28:44.39Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DatabaseContext.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\DatabaseContext.cs",
-              "RelativeDocumentMoniker": "TaskFlow\\Models\\DatabaseContext.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Models\\DatabaseContext.cs",
-              "RelativeToolTip": "TaskFlow\\Models\\DatabaseContext.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwBkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T10:16:40.288Z"
+              "DocumentIndex": 16,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "TaskFlow\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "TaskFlow\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T23:34:03.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Register.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\Account\\Register.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\Account\\Register.razor",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\Account\\Register.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\Account\\Register.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\Account\\Register.razor",
               "RelativeToolTip": "TaskFlow\\Components\\Pages\\Account\\Register.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -392,11 +437,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Program.cs",
               "RelativeDocumentMoniker": "TaskFlow\\Program.cs",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Program.cs",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Program.cs",
               "RelativeToolTip": "TaskFlow\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -404,23 +449,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "20250115123704_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123704_InitialCreate.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123704_InitialCreate.cs",
+              "RelativeDocumentMoniker": "TaskFlow\\Migrations\\20250115123704_InitialCreate.cs",
               "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123704_InitialCreate.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Migrations\\20250115123704_InitialCreate.cs",
+              "RelativeToolTip": "TaskFlow\\Migrations\\20250115123704_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T12:37:04.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "NavMenu.razor.css",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\NavMenu.razor.css",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\NavMenu.razor.css",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Layout\\NavMenu.razor.css",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\NavMenu.razor.css",
               "RelativeToolTip": "TaskFlow\\Components\\Layout\\NavMenu.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -428,11 +473,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "MainLayout.razor.css",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\MainLayout.razor.css",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Layout\\MainLayout.razor.css",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Layout\\MainLayout.razor.css",
               "RelativeToolTip": "TaskFlow\\Components\\Layout\\MainLayout.razor.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -440,23 +485,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "TaskFlow\\Components\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "TaskFlow\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAswCgAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T23:34:03.138Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "Logout.razor",
-              "DocumentMoniker": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\Account\\Logout.razor",
+              "DocumentMoniker": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\Account\\Logout.razor",
               "RelativeDocumentMoniker": "TaskFlow\\Components\\Pages\\Account\\Logout.razor",
-              "ToolTip": "C:\\Users\\basse\\source\\repos\\TaskFlow\\TaskFlow\\Components\\Pages\\Account\\Logout.razor",
+              "ToolTip": "C:\\Users\\P11\\Downloads\\TaskFlow-Blazor\\TaskFlow-Blazor-main\\TaskFlow\\Components\\Pages\\Account\\Logout.razor",
               "RelativeToolTip": "TaskFlow\\Components\\Pages\\Account\\Logout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

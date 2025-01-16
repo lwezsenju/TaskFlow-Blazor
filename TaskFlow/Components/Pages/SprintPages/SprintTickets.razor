@@ -19,11 +19,11 @@
     }
     else
     {
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
+        <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8">
             <h2 class="text-3xl font-semibold text-indigo-900 mb-6 text-center">Sprint Details</h2>
 
             <!-- Sprint Info -->
-            <div >
+            <div>
                 <div class="flex justify-between">
                     <div>
                         <p class="text-lg font-medium text-gray-700">Sprint Name:</p>
@@ -42,20 +42,28 @@
 
                 </div>
 
-                
+
             </div>
 
             <!-- Tickets Status Grouped in Big Sections -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
                 <!-- Offen Section -->
-                <div class="bg-indigo-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all">
+                <div class="bg-indigo-50 p-8 rounded-lg shadow-md transition-all">
                     <h3 class="text-2xl font-semibold text-indigo-700 mb-4 text-center">Offen</h3>
                     @foreach (var ticket in sprint.Tickets.Where(t => t.Status == TicketStatus.Offen))
                     {
-                        <div class="p-4 bg-indigo-100 rounded-lg mb-4 shadow-sm">
-                            <p class="text-lg text-gray-700 font-medium">@ticket.Title</p>
-                            <p class="text-sm text-gray-500">@ticket.Description</p>
+                        <div class="hover:cursor-pointer hover:shadow-xl max-w-sm p-3 mb-4 bg-white shadow-sm rounded-lg shadow dark:bg-gray-700 dark:border-gray-700" @onclick="()=>GoToTicketDetails(ticket.Id)">
+                            <div class="flex justify-between">
+                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">@ticket.Title</h5>
+                                <div class="flex gap-1">
+                                    <span class="flex items-center bg-blue-400 text-gray-100 text-xs px-3 py-1  h-5 rounded-full">@ticket.Points</span>
+
+                                </div>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 truncate">@ticket.Description</p>
+
                         </div>
+
                     }
 
                     @if (!sprint.Tickets.Any(t => t.Status == TicketStatus.Offen))
@@ -65,13 +73,20 @@
                 </div>
 
                 <!-- In Bearbeitung Section -->
-                <div class="bg-yellow-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all">
+                <div class="bg-yellow-50 p-8 rounded-lg shadow-md  transition-all">
                     <h3 class="text-2xl font-semibold text-yellow-600 mb-4 text-center">In Bearbeitung</h3>
                     @foreach (var ticket in sprint.Tickets.Where(t => t.Status == TicketStatus.InBearbeitung))
                     {
-                        <div class="p-4 bg-yellow-100 rounded-lg mb-4 shadow-sm">
-                            <p class="text-lg text-gray-700 font-medium">@ticket.Title</p>
-                            <p class="text-sm text-gray-500">@ticket.Description</p>
+                        <div class=" hover:shadow-xl hover:cursor-pointer max-w-sm p-3 mb-4 bg-white shadow-sm rounded-lg shadow dark:bg-gray-700 dark:border-gray-700" @onclick="()=>GoToTicketDetails(ticket.Id)">
+                            <div class="flex justify-between">
+                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">@ticket.Title</h5>
+                                <div class="flex gap-1">
+                                    <span class="flex items-center bg-blue-400 text-gray-100 text-xs px-3 py-1  h-5 rounded-full">@ticket.Points</span>
+
+                                </div>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 truncate">@ticket.Description</p>
+
                         </div>
                     }
 
@@ -82,13 +97,20 @@
                 </div>
 
                 <!-- Erledigt Section -->
-                <div class="bg-green-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all">
+                <div class="bg-green-50 p-8 rounded-lg shadow-md transition-all">
                     <h3 class="text-2xl font-semibold text-green-600 mb-4 text-center">Erledigt</h3>
                     @foreach (var ticket in sprint.Tickets.Where(t => t.Status == TicketStatus.Erledigt))
                     {
-                        <div class="p-4 bg-green-100 rounded-lg mb-4 shadow-sm">
-                            <p class="text-lg text-gray-700 font-medium">@ticket.Title</p>
-                            <p class="text-sm text-gray-500">@ticket.Description</p>
+                        <div class=" hover:shadow-xl hover:cursor-pointer max-w-sm p-3 mb-4 bg-white shadow-sm rounded-lg shadow dark:bg-gray-700 dark:border-gray-700" @onclick="()=>GoToTicketDetails(ticket.Id)">
+                            <div class="flex justify-between">
+                                <h5 class="mb-2 text-xl font-semibold tracking-tight text-gray-900 dark:text-white">@ticket.Title</h5>
+                                <div class="flex gap-1">
+                                    <span class="flex items-center bg-blue-400 text-gray-100 text-xs px-3 py-1  h-5 rounded-full">@ticket.Points</span>
+
+                                </div>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 truncate">@ticket.Description</p>
+
                         </div>
                     }
 
@@ -135,6 +157,9 @@
         {
             Navigation.NavigateTo("/sprints"); // Redirect to the sprints list or another page
         }
+    }
+    private void GoToTicketDetails(int id){
+        Navigation.NavigateTo("/tickets/details/"+id.ToString());
     }
     private void GoBack()
     {

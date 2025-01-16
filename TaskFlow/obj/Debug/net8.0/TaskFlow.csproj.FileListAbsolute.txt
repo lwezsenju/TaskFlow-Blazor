@@ -277,3 +277,4 @@ C:\Users\P11\Downloads\TaskFlow-Blazor\TaskFlow-Blazor-main\TaskFlow\obj\Debug\n
 C:\Users\P11\Downloads\TaskFlow-Blazor\TaskFlow-Blazor-main\TaskFlow\obj\Debug\net8.0\TaskFlow.genruntimeconfig.cache
 C:\Users\P11\Downloads\TaskFlow-Blazor\TaskFlow-Blazor-main\TaskFlow\obj\Debug\net8.0\ref\TaskFlow.dll
 C:\Users\basse\source\repos\TaskFlow\TaskFlow\obj\Debug\net8.0\TaskFlow.sourcelink.json
+C:\Users\P11\Downloads\TaskFlow-Blazor\TaskFlow-Blazor-main\TaskFlow\obj\Debug\net8.0\TaskFlow.sourcelink.json
