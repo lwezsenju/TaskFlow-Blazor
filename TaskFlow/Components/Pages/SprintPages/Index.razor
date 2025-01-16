@@ -1,0 +1,169 @@
+﻿@page "/sprints"
+@using TaskFlow.Models
+@inject SprintService SprintService
+
+@using TaskFlow.Components.SharedComponents;
+@rendermode InteractiveServer
+<PageTitle>Sprints List</PageTitle>
+
+<div class="container mx-auto p-6">
+    <!-- Title Section -->
+    <div class="mb-6 flex justify-between items-center">
+        <h2 class="text-3xl font-semibold text-indigo-900">All Sprints</h2>
+
+        <!-- Create Sprint Button -->
+        <button @onclick="ShowCreateSprintModal" class="bg-indigo-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200">
+            Create Sprint
+        </button>
+    </div>
+
+    <!-- Sprint Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @foreach (var sprint in sprints)
+        {
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-indigo-700">@sprint.Name</h3>
+                    <DropdownMenu>
+                            <li>
+                            <a href="sprints/details/@sprint.Id" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-orange-500">Details</a>
+                            </li>
+                            <li>
+                                <a href="sprints/@sprint.Id"  class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-indigo-600" >Edit</a>
+                            </li>
+                            <li>
+                                <a @onclick="()=>DeleteSprint(sprint)" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-red-600" >Delete</a>
+                            </li>
+                        </DropdownMenu>
+                </div>
+
+                <div class="text-sm text-gray-600 mb-4">
+                    <p><strong>Start Date:</strong> @sprint.StartDate.ToString("dd MMM yyyy")</p>
+                    <p><strong>End Date:</strong> @sprint.EndDate.ToString("dd MMM yyyy")</p>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span class="inline-block px-3 py-1 text-sm font-medium text-white rounded-full" style="background-color: @sprint.Color">
+                        Status: @GetSprintStatus(sprint)
+                    </span>
+
+                    <a href="@($"/sprints/{sprint.Id}")" class="text-indigo-600 hover:text-indigo-800 transition duration-200">
+                        View Tickets
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Create Sprint Modal -->
+@if (isCreateSprintModalOpen)
+{
+    <div class="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white rounded-lg p-8 shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-semibold text-indigo-900 mb-6">Create New Sprint</h2>
+            <EditForm Model="@sprint" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="text-red-600 mb-4" />
+
+                <!-- Sprint Name -->
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Sprint Name</label>
+                    <InputText id="name" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg" @bind-Value="sprint.Name" />
+                </div>
+
+                <!-- Start Date -->
+                <div class="mb-4">
+                    <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+                    <InputDate id="startDate" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg" @bind-Value="sprint.StartDate" />
+                </div>
+
+                <!-- End Date -->
+                <div class="mb-4">
+                    <label for="endDate" class="block text-sm font-medium text-gray-700">End Date</label>
+                    <InputDate id="endDate" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg" @bind-Value="sprint.EndDate" />
+                </div>
+
+                <!-- Sprint Color -->
+                <div class="mb-4">
+                    <label for="color" class="block text-sm font-medium text-gray-700">Sprint Color</label>
+                    <InputText id="color" class="mt-1 block w-full p-3 border border-gray-300 rounded-lg" @bind-Value="sprint.Color" />
+                </div>
+
+                <!-- Submit Button -->
+                <div class="mb-4 flex justify-end">
+                    <button type="submit" class="bg-indigo-600 text-white py-2 px-6 rounded-lg shadow-md hover:bg-indigo-700 transition duration-200">
+                        Create Sprint
+                    </button>
+                </div>
+            </EditForm>
+
+            <!-- Close Button -->
+            <button @onclick="CloseCreateSprintModal" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+}
+
+@code {
+
+    private bool isCreateSprintModalOpen = false;
+    private Sprint sprint = new Sprint();
+    [CascadingParameter]
+    Task<AuthenticationState> authStateTask { get; set; }
+
+    private int UserId { get; set; }
+
+    private List<Sprint> sprints = new List<Sprint>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authStateTask;
+        UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        // Fetch all sprints and display them on the page
+        sprints = await SprintService.GetByUserIdAsync(UserId);
+    }
+    private async Task DeleteSprint(Sprint sprint)
+    {
+        await SprintService.DeleteAsync(sprint.Id,UserId);
+        sprints = await SprintService.GetByUserIdAsync(UserId);
+    }
+
+    private string GetSprintStatus(Sprint sprint)
+    {
+        // Return the status of the sprint based on end date comparison to the current date
+        if (sprint.EndDate < DateTime.Now)
+        {
+            return "Completed";
+        }
+        else if (sprint.StartDate > DateTime.Now)
+        {
+            return "Upcoming";
+        }
+        else
+        {
+            return "In Progress";
+        }
+    }
+    private void ShowCreateSprintModal()
+    {
+        isCreateSprintModalOpen = true;
+        sprint = new Sprint();
+    }
+
+    private void CloseCreateSprintModal()
+    {
+        isCreateSprintModalOpen = false;
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        sprint.UserId = UserId;
+        await SprintService.CreateAsync(sprint);
+        sprints = await SprintService.GetByUserIdAsync(UserId); // Refresh the list
+        CloseCreateSprintModal();
+    }
+}

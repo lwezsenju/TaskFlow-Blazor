@@ -1,10 +1,8 @@
 ﻿@page "/tickets"
 @inject TicketService TicketService
-@using Microsoft.AspNetCore.Authorization
-@using Microsoft.AspNetCore.Components.Authorization
 @using TaskFlow.Models
 @inject NavigationManager NavigationManager
-@using System.Security.Claims
+@using TaskFlow.Components.SharedComponents;
 
 @attribute [Authorize]
 @rendermode InteractiveServer
@@ -25,58 +23,65 @@
         {
             @foreach (var ticket in tickets)
             {
-                <div class="bg-white shadow-lg rounded-lg p-6 transition-all hover:shadow-2xl hover:scale-105 max-w-3xl mx-auto">
-                    <!-- Ticket Title -->
-                    <h2 class="text-3xl font-bold text-indigo-800 mb-4 transition-colors hover:text-indigo-600 cursor-pointer">
-                        @ticket.Title
-                    </h2>
+                <div class="bg-white flex justify-between shadow-lg rounded-lg p-6 transition-all hover:shadow-2xl hover:scale-105 max-w-3xl mx-auto border border-gray-200">
+                    <div>
+                        <!-- Ticket Title -->
+                        <h2 class="text-3xl font-semibold text-indigo-900 mb-4 transition-colors hover:text-indigo-600 cursor-pointer">
+                            @ticket.Title
+                        </h2>
 
-                    <!-- Ticket Description -->
-                    <p class="text-lg text-gray-700 mb-4">
-                        @ticket.Description
-                    </p>
+                        <!-- Ticket Description -->
+                        <p class="text-lg line-clamp-2 text-gray-600 mb-4 leading-relaxed">
+                            @ticket.Description
+                        </p>
 
-                    <!-- Ticket Points -->
-                    <div class="flex items-center space-x-2 mb-4">
-                        <span class="text-xl font-semibold text-indigo-600">Points:</span>
-                        <span class="text-xl font-semibold text-gray-800">@ticket.Points</span>
+                        <!-- Ticket Points -->
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="text-xl font-semibold text-indigo-600">Points:</span>
+                            <span class="text-xl font-semibold text-gray-800">@ticket.Points</span>
+                        </div>
+
+                        <!-- Created At -->
+                        <div class="text-sm text-gray-500 mb-4">
+                            Created: @ticket.CreatedAt.ToString("dd MMM yyyy")
+                        </div>
                     </div>
 
-                    <!-- Created At -->
-                    <div class="text-sm text-gray-500 mb-4">
-                        Created: @ticket.CreatedAt.ToString("dd MMM yyyy")
-                    </div>
 
                     <!-- Status and Buttons -->
-                    <div class="flex justify-between items-center mt-4">
+                    <div class="flex justify-between flex-col">
+                        <!-- Edit and Delete Buttons -->
+                        <DropdownMenu>
+                            <li>
+                                <a href="tickets/details/@ticket.Id" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-orange-500">Details</a>
+                            </li>
+                            <li>
+                                <a href="tickets/@ticket.Id"  class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-indigo-600" >Edit</a>
+                            </li>
+                            <li>
+                                <a @onclick="()=>DeleteTicket(ticket)" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-red-600" >Delete</a>
+                            </li>
+                        </DropdownMenu>
+
+
+
                         <!-- Status Dropdown on the Right -->
-                        <div class="w-1/3">
+                        <div class="min-w-36">
                             <label class="block text-sm font-medium text-gray-600 mb-2">Status:</label>
                             <select class="w-full p-3 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300"
                             value="@ticket.Status"
                             @onchange="(e) => UpdateTicketStatus(ticket, e)">
-                                <option value="@TicketStatus.Offen">Offen</option>
-                                <option value="@TicketStatus.InBearbeitung">In Progress</option>
-                                <option value="@TicketStatus.Erledigt">Closed</option>
+                                @foreach (var status in Enum.GetValues<TicketStatus>())
+                                {
+                                    <option value="@status">@status</option>
+                                }
                             </select>
                         </div>
 
-                        <!-- Edit and Delete Buttons -->
-                        <div class="flex space-x-4 ml-4">
-                            <!-- Edit Button -->
-                            <button class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 transition duration-300"
-                            @onclick="() => EditTicket(ticket)">
-                                Edit
-                            </button>
 
-                            <!-- Delete Button -->
-                            <button class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700 transition duration-300"
-                            @onclick="() => DeleteTicket(ticket)">
-                                Delete
-                            </button>
-                        </div>
                     </div>
                 </div>
+
 
 
 
@@ -141,7 +146,22 @@
         </div>
     }
 </div>
+<script>
+    // Toggle dropdown visibility
+    const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdown');
 
+    dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', (event) => {
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+    dropdownMenu.classList.add('hidden');
+    }
+    });
+</script>
 @code {
     private bool showCreateTicketModal = false;
     private Ticket newTicket = new Ticket();
@@ -158,10 +178,14 @@
 
         var authState = await authStateTask;
         UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        await GetAllTickets();
 
-        tickets = await TicketService.GetByUserIdAsync(UserId);
+
     }
-
+    private async Task GetAllTickets(){
+        tickets = await TicketService.GetByUserIdAsync(UserId);
+        StateHasChanged();
+    }
     private void ShowCreateTicketModal()
     {
         showCreateTicketModal = true;
@@ -196,7 +220,11 @@
         newTicket = ticket;
 
     }
-    private async Task DeleteTicket(Ticket ticket) { }
+    private async Task DeleteTicket(Ticket ticket) {
+        await TicketService.DeleteAsync(ticket);
+        await GetAllTickets();
+
+    }
     private async Task CreateTicket()
     {
         // if (string.IsNullOrWhiteSpace(newTicket.Title) || string.IsNullOrWhiteSpace(newTicket.Description) || newTicket.Points > 100)

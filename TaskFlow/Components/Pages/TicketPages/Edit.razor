@@ -1,0 +1,97 @@
+﻿@page "/tickets/{TicketId:int}"
+@inject NavigationManager Navigation
+@inject TicketService TicketService
+
+@using TaskFlow.Models
+@using Microsoft.AspNetCore.Components.Forms
+
+@attribute [Authorize]
+@rendermode InteractiveServer
+<PageTitle>Edit Ticket</PageTitle>
+
+<div class="container mx-auto p-6">
+    <div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-semibold text-indigo-900 mb-6 text-center">Edit Ticket</h2>
+
+        <EditForm Model="ticket" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-4">
+                <label for="Title" class="block text-sm font-medium text-gray-700">Title</label>
+                <InputText id="Title" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           @bind-Value="ticket.Title" />
+                <ValidationMessage For="@(() => ticket.Title)" />
+            </div>
+
+            <div class="mb-4">
+                <label for="Description" class="block text-sm font-medium text-gray-700">Description</label>
+                <InputTextArea id="Description" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                               @bind-Value="ticket.Description" />
+                <ValidationMessage For="@(() => ticket.Description)" />
+            </div>
+
+            <div class="mb-4">
+                <label for="Points" class="block text-sm font-medium text-gray-700">Points</label>
+                <InputNumber id="Points" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                             @bind-Value="ticket.Points" />
+                <ValidationMessage For="@(() => ticket.Points)" />
+            </div>
+
+            <div class="mb-6">
+                <label for="Status" class="block text-sm font-medium text-gray-700">Status</label>
+                <select id="Status" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        @bind="ticket.Status">
+                    @foreach (var status in Enum.GetValues<TicketStatus>())
+                    {
+                        <option value="@status">@status</option>
+                    }
+                </select>
+                <ValidationMessage For="@(() => ticket.Status)" />
+            </div>
+
+            <div class="flex justify-between">
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500">Save Changes</button>
+                <button type="button" @onclick="Cancel" class="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-500">Cancel</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int TicketId { get; set; }
+
+
+    private Ticket ticket = new Ticket();
+    [CascadingParameter]
+    Task<AuthenticationState> authStateTask { get; set; }
+
+    private int UserId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authStateTask;
+        UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
+        ticket = await TicketService.GetByIdAsync(TicketId,UserId);
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await TicketService.UpdateAsync(ticket);
+            Navigation.NavigateTo("/tickets");
+        }
+        catch (Exception)
+        {
+            // Handle error (e.g. show error message)
+        }
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/tickets");
+    }
+}

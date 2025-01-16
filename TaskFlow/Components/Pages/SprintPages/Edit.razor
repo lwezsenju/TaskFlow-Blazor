@@ -1,0 +1,94 @@
+﻿@page "/sprints/{SprintId:int}"
+@inject NavigationManager Navigation
+@inject SprintService SprintService
+
+@using TaskFlow.Models
+@using Microsoft.AspNetCore.Components.Forms
+
+@attribute [Authorize]
+@rendermode InteractiveServer
+<PageTitle>Edit Sprint</PageTitle>
+
+<div class="container mx-auto p-6">
+    <div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-8">
+        <h2 class="text-3xl font-semibold text-indigo-900 mb-6 text-center">Edit Sprint</h2>
+
+        <EditForm Model="sprint" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-4">
+                <label for="Name" class="block text-sm font-medium text-gray-700">Sprint Name</label>
+                <InputText id="Name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           @bind-Value="sprint.Name" />
+                <ValidationMessage For="@(() => sprint.Name)" />
+            </div>
+
+            <div class="mb-4">
+                <label for="StartDate" class="block text-sm font-medium text-gray-700">Start Date</label>
+                <InputDate id="StartDate" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           @bind-Value="sprint.StartDate" />
+                <ValidationMessage For="@(() => sprint.StartDate)" />
+            </div>
+
+            <div class="mb-4">
+                <label for="EndDate" class="block text-sm font-medium text-gray-700">End Date</label>
+                <InputDate id="EndDate" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           @bind-Value="sprint.EndDate" />
+                <ValidationMessage For="@(() => sprint.EndDate)" />
+            </div>
+
+            <div class="mb-6">
+                <label for="Color" class="block text-sm font-medium text-gray-700">Color</label>
+                <InputText id="Color" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                           @bind-Value="sprint.Color" />
+                <ValidationMessage For="@(() => sprint.Color)" />
+            </div>
+
+            <div class="flex justify-between">
+                <button type="submit" class="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500">Save Changes</button>
+                <button type="button" @onclick="Cancel" class="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-500">Cancel</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int SprintId { get; set; }
+
+    private Sprint sprint = new Sprint();
+    [CascadingParameter]
+    Task<AuthenticationState> authStateTask { get; set; }
+
+    private int UserId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get the user ID from the authentication state
+        var authState = await authStateTask;
+        UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
+        // Fetch the Sprint details based on SprintId and UserId (to ensure that the user owns the Sprint)
+        sprint = await SprintService.GetByIdAsync(SprintId);
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            // Update the Sprint
+            await SprintService.UpdateAsync(sprint);
+            Navigation.NavigateTo("/sprints");
+        }
+        catch (Exception)
+        {
+            // Handle error (e.g., show error message)
+        }
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/sprints");
+    }
+}

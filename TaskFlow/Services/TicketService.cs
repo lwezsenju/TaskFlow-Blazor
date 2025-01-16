@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Net.Sockets;
 using TaskFlow.Models;
 
 namespace TaskFlow.Services
@@ -33,6 +34,15 @@ namespace TaskFlow.Services
             {
                 throw new HttpRequestException("Ticket konnte nicht aktualisiert werden.");
             }
+        }
+        public async Task DeleteAsync(Ticket ticket)
+        {
+            _context.Tickets.Remove(ticket);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<Ticket?> GetByIdAsync(int id,int userId)
+        {
+            return await _context.Tickets.FirstOrDefaultAsync(t => t.Id == id && t.UserId == userId);
         }
         public async Task<List<Ticket?>> GetByUserIdAsync(int userId)
         {

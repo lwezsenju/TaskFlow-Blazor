@@ -1,0 +1,143 @@
+﻿@page "/sprintTickets/{SprintId:int}"
+@using TaskFlow.Models;
+@inject SprintService SprintService
+@inject TicketService TicketService
+
+
+@inject NavigationManager Navigation
+@attribute [Authorize]
+@rendermode InteractiveServer
+
+<PageTitle>Sprint Details</PageTitle>
+
+<div class="container mx-auto p-6">
+    @if (sprint == null)
+    {
+        <div class="text-red-500 text-center">
+            <p>Sprint not found or you don't have permission to view it.</p>
+        </div>
+    }
+    else
+    {
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-xl p-8">
+            <h2 class="text-3xl font-semibold text-indigo-900 mb-6 text-center">Sprint Details</h2>
+
+            <!-- Sprint Info -->
+            <div >
+                <div class="flex justify-between">
+                    <div>
+                        <p class="text-lg font-medium text-gray-700">Sprint Name:</p>
+                        <p class="text-2xl font-bold text-indigo-600 mb-4">@sprint.Name</p>
+                    </div>
+
+                    <div>
+                        <p class="text-lg font-medium text-gray-700">Start Date:</p>
+                        <p class="text-lg text-gray-600 mb-4">@sprint.StartDate.ToString("dd MMM yyyy")</p>
+                    </div>
+
+                    <div>
+                        <p class="text-lg font-medium text-gray-700">End Date:</p>
+                        <p class="text-lg text-gray-600">@sprint.EndDate.ToString("dd MMM yyyy")</p>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+            <!-- Tickets Status Grouped in Big Sections -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+                <!-- Offen Section -->
+                <div class="bg-indigo-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-semibold text-indigo-700 mb-4 text-center">Offen</h3>
+                    @foreach (var ticket in sprint.Tickets.Where(t => t.Status == TicketStatus.Offen))
+                    {
+                        <div class="p-4 bg-indigo-100 rounded-lg mb-4 shadow-sm">
+                            <p class="text-lg text-gray-700 font-medium">@ticket.Title</p>
+                            <p class="text-sm text-gray-500">@ticket.Description</p>
+                        </div>
+                    }
+
+                    @if (!sprint.Tickets.Any(t => t.Status == TicketStatus.Offen))
+                    {
+                        <p class="text-center text-gray-500 text-sm">No tickets in "Offen" status.</p>
+                    }
+                </div>
+
+                <!-- In Bearbeitung Section -->
+                <div class="bg-yellow-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-semibold text-yellow-600 mb-4 text-center">In Bearbeitung</h3>
+                    @foreach (var ticket in sprint.Tickets.Where(t => t.Status == TicketStatus.InBearbeitung))
+                    {
+                        <div class="p-4 bg-yellow-100 rounded-lg mb-4 shadow-sm">
+                            <p class="text-lg text-gray-700 font-medium">@ticket.Title</p>
+                            <p class="text-sm text-gray-500">@ticket.Description</p>
+                        </div>
+                    }
+
+                    @if (!sprint.Tickets.Any(t => t.Status == TicketStatus.InBearbeitung))
+                    {
+                        <p class="text-center text-gray-500 text-sm">No tickets in "In Bearbeitung" status.</p>
+                    }
+                </div>
+
+                <!-- Erledigt Section -->
+                <div class="bg-green-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-4 text-center">Erledigt</h3>
+                    @foreach (var ticket in sprint.Tickets.Where(t => t.Status == TicketStatus.Erledigt))
+                    {
+                        <div class="p-4 bg-green-100 rounded-lg mb-4 shadow-sm">
+                            <p class="text-lg text-gray-700 font-medium">@ticket.Title</p>
+                            <p class="text-sm text-gray-500">@ticket.Description</p>
+                        </div>
+                    }
+
+                    @if (!sprint.Tickets.Any(t => t.Status == TicketStatus.Erledigt))
+                    {
+                        <p class="text-center text-gray-500 text-sm">No tickets in "Erledigt" status.</p>
+                    }
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="flex justify-center mt-8">
+                <button @onclick="GoBack" class="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-500">
+                    Back to Sprints
+                </button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int SprintId { get; set; }
+
+    private Sprint sprint;
+
+
+    [CascadingParameter]
+    Task<AuthenticationState> authStateTask { get; set; }
+    private int UserId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        // Get the user ID from the authentication state
+        var authState = await authStateTask;
+        UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
+        // Fetch the Sprint details based on SprintId (user may be the owner of the sprint)
+        sprint = await SprintService.GetByIdAsync(SprintId);
+
+        // Redirect if the Sprint is not found or doesn't belong to the user
+        if (sprint == null)
+        {
+            Navigation.NavigateTo("/sprints"); // Redirect to the sprints list or another page
+        }
+    }
+    private void GoBack()
+    {
+        Navigation.NavigateTo("/sprints"); // Navigate back to the sprints page
+    }
+}

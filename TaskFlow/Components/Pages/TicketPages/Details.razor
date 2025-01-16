@@ -1,0 +1,80 @@
+﻿@page "/tickets/details/{TicketId:int}"
+@using TaskFlow.Models
+@inject TicketService TicketService
+@inject NavigationManager Navigation
+
+
+@attribute [Authorize]
+@rendermode InteractiveServer
+<PageTitle>Ticket Details</PageTitle>
+
+<div class="container mx-auto p-6">
+    @if (ticket == null)
+    {
+        <div class="text-red-500 text-center">
+            <p>Ticket not found or you don't have permission to view it.</p>
+        </div>
+    }
+    else
+    {
+        <div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-semibold text-indigo-900 mb-6 text-center">Ticket Details</h2>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Title</label>
+                <p class="mt-1 text-lg font-medium text-gray-900">@ticket.Title</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Description</label>
+                <p class="mt-1 text-lg text-gray-600">@ticket.Description</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Points</label>
+                <p class="mt-1 text-lg font-medium text-indigo-600">@ticket.Points</p>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-sm font-medium text-gray-700">Status</label>
+                <p class="mt-1 text-lg font-medium text-gray-800">@ticket.Status</p>
+            </div>
+
+            <div class="flex justify-between mt-6">
+                <button @onclick="GoBack" class="bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-500">Back to Tickets</button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int TicketId { get; set; }
+
+    private Ticket ticket;
+
+
+    [CascadingParameter]
+    Task<AuthenticationState> authStateTask { get; set; }
+
+    private int UserId { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await authStateTask;
+        UserId = Convert.ToInt32(authState.User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+
+        ticket = await TicketService.GetByIdAsync(TicketId, UserId);
+
+        // Redirect if the ticket is not found or doesn't belong to the user
+        if (ticket == null)
+        {
+            Navigation.NavigateTo("/tickets"); // Redirect to the tickets list or another page
+        }
+    }
+
+    private void GoBack()
+    {
+        Navigation.NavigateTo("/tickets"); // Navigate back to the tickets page
+    }
+}

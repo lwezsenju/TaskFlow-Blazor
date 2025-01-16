@@ -1,0 +1,47 @@
+﻿@using Microsoft.AspNetCore.Components
+@inject IJSRuntime JSRuntime
+<div  class="relative inline-block text-right">
+    <button @onclick="ToggleDropdown"  class="inline-block text-gray-700 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-indigo-300 rounded-lg text-sm p-2.5" type="button">
+        <span class="sr-only">Open dropdown</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+            <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z" />
+        </svg>
+    </button>
+
+    <!-- Dropdown menu -->
+    @if (isDropdownVisible)
+    {
+        <div class="z-10 absolute right-0 w-44 bg-white divide-y divide-gray-100 rounded-lg shadow-lg">
+            <ul class="py-2 text-sm text-gray-700">
+                @* <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-indigo-600" @onclick="OnEditClicked">Edit</a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-gray-700 hover:text-red-600" @onclick="OnDeleteClicked">Delete</a>
+                </li> *@
+                @ChildContent
+            </ul>
+        </div>
+    }
+</div>
+
+
+
+@code {
+    private bool isDropdownVisible = false;
+    [Parameter]
+	public RenderFragment ChildContent { get; set; }
+
+    protected async override void OnInitialized()
+    {
+        base.OnInitialized();
+        // Add a click event listener to the document
+    }
+
+    // Toggles the visibility of the dropdown menu
+    private void ToggleDropdown()
+    {
+        isDropdownVisible = !isDropdownVisible;
+    }
+   
+}
